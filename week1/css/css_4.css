@@ -1,0 +1,11 @@
+#wrapper{
+  width:960px;
+  background-color:yellow;
+  overflow:hidden;
+  height:auto;
+}
+.content{
+  width:320px;
+  background-color:orange;
+  float:left;
+}
