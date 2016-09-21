@@ -1,0 +1,22 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Tahoma";
+}
+#header{
+    display: inline-block;
+    vertical-align: top;
+    width: 900px;
+}
+body form input[type=text]{
+        width: 200px;
+        height: 15px;
+        border-radius: 5px;
+        margin-left: 100px;
+        margin-bottom: 20px;
+    }
+
+#middle{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}

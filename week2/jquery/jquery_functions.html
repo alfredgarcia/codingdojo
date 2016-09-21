@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="JQuery Functions" />
+	<title>JQuery Functions</title>
+    <link rel="stylesheet" href="jquery_functions.css" />
+    <style>
+      p {
+        margin: 8px;
+        font-size: 16px;
+      }
+      .selected {
+        color: blue;
+      }
+      .highlight {
+        background: yellow;
+      }
+  </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $( "input" ).focus();
+
+        $('#previous').click(function(){
+            alert('you are leaving to previous page!');
+        });
+
+        $('#forward').click(function(){
+            alert('you are leaving to forward page!');
+        });
+
+        $('#stop').click(function() {
+            $( "input" ).val('Enter URL');
+        });
+
+        $('#home').click(function(){
+            $('input').val('http://localhost/jQuery.html')
+        });
+
+        $('p').hover(function(){
+            $('p').text('Some new text using the .text function');
+        });
+
+        $('#addclass').click(function(){
+            $('#middle p').addClass('highlight')
+        });
+
+    });
+    </script>
+</head>
+
+<body>
+
+    <div id="header">
+        <p> My JQuery basic assignment</p>
+        <button id="previous">&#8678;</button>
+        <button id="forward">&#8680;</button>
+        <button id="stop">&#10006;</button>
+        <button id="home">&#xe021;</button>
+        <form>
+            <input type="text" value="http://localhost/jQuery.html">
+        </form>
+    </div>
+
+    <div id="middle">
+        <button id="addclass">AddClass</button>
+        <h2>AddClass</h2>
+        <p>Click the button to add class 'red' to this paragraph</p>
+
+        <input id="check1" type="checkbox" checked="checked">
+        <label for="check1">Check me</label>
+    </div>
+
+</body>
+</html>
+
+
+<!--
+.attr
+.html
+.data
+.before
+.after
+.append
+.show
+.hide
+.toggle
+.fadeIn
+.fadeOut
+.slideDown
+.slideUp
+.slideToggle -->
