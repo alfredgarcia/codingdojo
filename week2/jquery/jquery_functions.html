@@ -46,6 +46,10 @@
             $('#middle p').addClass('highlight')
         });
 
+        $('img').click(function(){
+                $(this).hide();
+            });
+
     });
     </script>
 </head>
@@ -70,6 +74,9 @@
 
         <input id="check1" type="checkbox" checked="checked">
         <label for="check1">Check me</label>
+
+        <img src="image1.jpg" alt="image 1" />
+        <img src="image2.jpg" alt="image 2"/>
     </div>
 
 </body>
@@ -77,14 +84,12 @@
 
 
 <!--
-.attr
 .html
 .data
 .before
 .after
 .append
 .show
-.hide
 .toggle
 .fadeIn
 .fadeOut

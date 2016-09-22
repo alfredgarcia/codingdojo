@@ -1,0 +1,27 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Tahoma";
+}
+img{
+    height: 300px;
+    width: 200px;
+	padding: 10px;
+}
+
+a{
+	padding: 0px;
+	text-decoration: none;
+
+}
+button{
+	height: 24px;
+	width: 60px;
+	border-radius: 5px;
+	display: block;
+}
+p{
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
