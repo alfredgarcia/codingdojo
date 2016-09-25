@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Ninja To Cat</title>
+		<meta name="description" content="Ninja To Cat - Week 2"/>
+		<link rel="stylesheet" href="ninja_to_cat.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#main img').click(function(){
+                    // every time clicked, swap 'src' & 'data-alt-src' values
+                    var temp = $(this).attr('src');
+					$(this).attr('src', $(this).attr('data-alt-src'));
+					$(this).attr('data-alt-src', temp);
+                });
+            });
+        </script>
+ 	</head>
+    <body>
+
+        <div id="main">
+            <img src="img/ninja0.png" alt="ninja-pic0" data-alt-src="img/cat0.png">
+            <img src="img/ninja1.png" alt="ninja-pic1" data-alt-src="img/cat1.png">
+            <img src="img/ninja2.png" alt="ninja-pic2" data-alt-src="img/cat2.png">
+            <img src="img/ninja3.png" alt="ninja-pic3" data-alt-src="img/cat3.png">
+            <img src="img/ninja4.png" alt="ninja-pic4" data-alt-src="img/cat4.png">
+        </div>
+    </body>
+</html>
