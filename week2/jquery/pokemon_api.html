@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Pokemon API</title>
+		<meta name="description" content="Pokemon API"/>
+		<link rel="stylesheet" href="pokemon_api.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                console.log('JQuery loaded')
+
+                for(var i = 1; i < 152; i++){
+                    $('#pokemon').append('<img id='+1+' src="http://pokeapi.co/media/img/'+i+'.png" alt="" />')
+                }
+
+                $('#pokemon').on('click', 'img', function(){
+                    console.log('hi')
+                    //this is AJAX
+                    $.get('http://pokeapi.co/api/v2/pokemon/'+$(this).attr('id')+'/', function(res){
+                        console.log(res);
+                        $('.data').html('<h1>'+res.name+'</h1><h3>Height: '+res.height+'</h3>')
+                    });
+                });
+            });
+        </script>
+        <style media="screen">
+            #pokemon{
+                width: 70%;
+            }
+            .row {
+                display: inline-block;
+            }
+            .data {
+                position: fixed;
+                // margin-left: 750px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Pokemon API</h1>
+            <div id="pokemon" class="row">
+                <img src="http://pokeapi.co/media/img/1.png" alt=""/>
+            </div>
+            <div class="data row">
+
+            </div>
+        </div>
+    </body>
+</html>
