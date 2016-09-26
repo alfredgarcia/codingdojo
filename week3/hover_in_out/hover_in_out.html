@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Disappearing Ninja" />
+	<title>Disappearing Ninja</title>
+	<link rel="stylesheet" href="hover_in_out.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#main img').hover(function(){
+                // every time clicked, swap 'src' & 'data-alt-src' values
+                var temp = $(this).attr('src');
+                $(this).attr('src', $(this).attr('data-alt-src'));
+                $(this).attr('data-alt-src', temp);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="main">
+        <img src="img/suit0.png" alt="" data-alt-src="img/suit1.png">
+        <img src="img/suit1.png" alt="" data-alt-src="img/suit0.png">
+        <img src="img/suit2.png" alt="" data-alt-src="img/suit3.png">
+        <img src="img/suit3.png" alt="" data-alt-src="img/suit2.png">
+    </div>
+</body>
+</html>

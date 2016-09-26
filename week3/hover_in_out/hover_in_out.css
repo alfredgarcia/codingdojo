@@ -1,0 +1,12 @@
+#main{
+	width: 1020px;
+	margin: 0 auto;
+}
+	#main img {
+		display: inline-block;
+		width: 200px;
+        height: 300px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: white;
+	}
