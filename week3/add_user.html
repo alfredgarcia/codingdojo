@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Adding a User with JQuery" />
+	<title>Adding a User</title>
+	<link rel="stylesheet" href="add_user.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('button').click(function(){
+                var firstname = $('#firstname').val();
+                var lastname = $('#lastname').val();
+                var email = $('#email').val();
+                var contact = $('#contact').val();
+
+                $('table').append("<tbody><tr><td>"+firstname+"</td>"+"<td>"+lastname+"</td>"+"<td>"+email+"</td>"+"<td>"+contact+"</td></tr></tbody>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email Address</th>
+				<th>Contact #</th>
+			</tr>
+		</thead>
+    </table>
+
+    <h1>Add User</h1>
+    <form action="process.php" method="post">
+    		First Name: <input type="text" id="firstname">
+            Last Name: <input type="text" id="lastname">
+            Email Address: <input type="text" id="email">
+            Contact No.: <input type="text" id="contact">
+    </form>
+    <button>Add User</button>
+
+</body>
+</html>
