@@ -1,0 +1,239 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Tahoma";
+}
+
+#wrapper{
+	width: 900px;
+	margin: 0px auto;
+}
+
+header{
+	height: 110px;
+	background-color: #F5F5F5;
+	overflow: hidden;
+}
+	header img, #right_header{
+		display: inline-block;
+		vertical-align: top;
+		margin: 5px;
+	}
+    header img{
+		margin-top: 20px;
+	}
+
+#right_header{
+	margin-left: 130px;
+    margin-top: -30px;
+}
+
+	#right_header form{
+		margin-left: 500px;
+	}
+
+	#right_header input[type=submit]
+	{
+		background-color: blue;
+		border: 1px none;
+		color: white;
+		padding: 1px;
+	}
+    #right_header img{
+        margin: 0px 5px 0px 5px;
+    }
+
+#nav_bar{
+	height: 25px;
+    width: 1000px;
+	background: #F5F5F5;
+    border-radius: 5px;
+    border-color: #F2F2F2;
+    font-size: 13px;
+	margin-top: 10px;
+    margin-left: 200px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+	#nav_bar a{
+		text-decoration: none;
+		color: black;
+		margin: 0px 5px 0px 5px;
+	}
+
+	#nav_bar li{
+		list-style-type: none;
+		display: inline;
+	}
+	#nav_bar li:after{
+		content: "|";
+		font-size: 15px;
+		color: silver;
+	}
+    #nav_bar li:first-child:before{
+		content: none;
+	}
+    #nav_bar li:last-child:after{
+        content: none;
+    }
+
+#main_content{
+	height: 590px;
+	background-color: blue;
+}
+
+#top_row{
+	padding-top: 10px;
+	width: 1010px;
+	height: 265px;
+    display: inline-block;
+}
+
+#left_box{
+	width: 250px;
+	margin: 0px 0px 0px 10px;
+	padding: 20px;
+    background-color: blue;
+}
+#top_left_box{
+    border: 1px solid #F5F5F5;
+    padding:5px;
+}
+    #top_left_box h1, h3{
+        background-color: blue;
+        border-top: 5px;
+        margin: 0px 0px 0px 0px;
+    }
+    #top_left_box h1{
+        color: white;
+        font-size: 20px;
+        margin-bottom: 0px;
+        font: Tahoma;
+    }
+    #top_left_box h3{
+        color: white;
+        font-size: 10px;
+        font: Tahoma;
+    }
+
+    #left_box h2{
+        font-size: 12px;
+        padding: 5px;
+    }
+    #left_box form{
+        background-color:#F5F5F5;
+    }
+#user_name a, #password a{
+    display: block;
+    color: blue;
+    font-size: 12px;
+    padding: 5px;
+    text-decoration: none;
+}
+#sign_in{
+    font-size: 10px;
+    padding: 10px;
+}
+    #sign_in a{
+        color: blue;
+        text-decoration: none;
+    }
+    #sign_in input[type=submit]{
+        border-radius: 7px;
+        width: 80px;
+    }
+#bottom_left_box{
+    border: 1px solid #F5F5F5;
+    font-size: 8px;
+    padding:5px;
+    margin-top: 20px;
+    color: white;
+
+}
+
+#top_row img{
+    display: block;
+    height: 250px;
+    width: 400px;
+    margin: -323px 10px 10px 295px;
+}
+
+#site_banner{
+    width: 880px;
+    background:#F5F5F5;
+    font-size: 12px;
+    padding:5px;
+    margin: 70px 5px 5px 5px;
+}
+    #site_banner a{
+        color:blue;
+        text-decoration: none;
+    }
+    #site_banner p{
+        font-weight: bold;
+    }
+#services{
+    display: inline-block;
+    height: 295px;
+}
+    .service{
+    	width: 223px;
+    	height: 265px;
+    	display: inline-block;
+    	vertical-align: top;
+    	background-color: #FEF5E3;
+    	margin-left: 20.5px;
+    	margin-top: 10px;
+    }
+	.service h3{
+		height: 20px;
+		background-color: #FEF5E3;
+		padding: 5px;
+		padding-left: 10px;
+		font-size: 16px;
+	}
+
+	.service p{
+		font-size: 12px;
+		padding: 0px 10px 0px 10px;
+		height: 100px;
+	}
+    #services img{
+        width: 50px;
+        height: 50px;
+        margin: 5px 5px 5px 5px;
+    }
+
+#lower_nav_bar{
+	height: 25px;
+    width: 1000px;
+	background: #F5F5F5;
+    border-radius: 5px;
+    border-color: #F2F2F2;
+    font-size: 13px;
+	margin-top: 10px;
+    margin-left: 100px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+	#lower_nav_bar a{
+		text-decoration: none;
+		color: black;
+		margin: 0px 5px 0px 5px;
+	}
+
+	#lower_nav_bar li{
+		list-style-type: none;
+		display: inline;
+	}
+	#lower_nav_bar li:after{
+		content: "|";
+		font-size: 15px;
+		color: silver;
+	}
+    #lower_nav_bar li:first-child:before{
+		content: none;
+	}
+    #lower_nav_bar li:last-child:after{
+        content: none;
+    }
