@@ -9,10 +9,11 @@ def index():
 
 @app.route('/check', methods=['POST'])
 def check():
-    session['guess'] = request.form['guess']
+    session['guess'] = int(request.form['guess'])
     rand = random.randrange(0, 101)
     low = 'Too Low'
     high = 'Too High'
+    hit = 'You Guessed the number correctly'
     if rand > session['guess']:
         session['output'] = low
     else:
