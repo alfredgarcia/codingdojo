@@ -5,7 +5,7 @@ app.secret_key = 'KeepItSecretKeepItSafe'
 def index():
     return render_template('index.html')
 
-@app.route('/process', methods=['Post'])
+@app.route('/process', methods=['POST'])
 def process():
     if len(request.form['name']) < 1:
         flash("Name cannot be empty!")
