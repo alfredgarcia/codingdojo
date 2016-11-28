@@ -54,7 +54,7 @@ def register():
 		return redirect('/')
 	pw_hash = bcrypt.generate_password_hash(request.form['userPassword'])
 	query_data = { 'userEmail': request.form['userEmail'], 'fName': request.form['userFirst'], 'lName': request.form['userLast'], 'pw_hash': pw_hash }
-	insert_query = "INSERT INTO users (email, password, firstName, lastName, created_at, updated_at) VALUES (:userEmail, :pw_hash, :fName, :lName, NOW(), NOW())"
+	insert_query = "INSERT INTO users (email, password, first_name, last_name, created_at, updated_at) VALUES (:userEmail, :pw_hash, :fName, :lName, NOW(), NOW())"
 	friend = mysql.query_db(insert_query, query_data)
 	return redirect('/wall')
 
@@ -76,8 +76,8 @@ def login():
 		return redirect('/')
 	if bcrypt.check_password_hash(user[0]['password'], inputPassword):
 		session['id'] = user[0]['id']
-		session['firstName'] = user[0]['firstName']
-		session['lastName'] = user[0]['lastName']
+		session['first_name'] = user[0]['first_name']
+		session['last_name'] = user[0]['last_name']
 		return redirect('/wall')
 	else:
 		flash("Invalid ID or PASSWORD!")
@@ -85,8 +85,8 @@ def login():
 
 @app.route('/wall')
 def wall():
-	message_query = "SELECT messages.id, messages.user_id, messages.message, users.firstName, users.lastName, messages.created_at FROM messages JOIN users ON messages.user_id = users.id"
-	comment_query = "SELECT comments.users_id, comments.comment, comments.messages_id, comments.created_at, users.firstName, users.lastName from comments LEFT JOIN users on users.id = comments.users_id LEFT JOIN messages on messages.id = comments.users_id"
+	message_query = "SELECT messages.id, messages.user_id, messages.message, users.first_name, users.last_name, messages.created_at FROM messages JOIN users ON messages.user_id = users.id"
+	comment_query = "SELECT comments.user_id, comments.comment, comments.message_id, comments.created_at, users.first_name, users.last_name from comments LEFT JOIN users on users.id = comments.user_id LEFT JOIN messages on messages.id = comments.user_id"
 	messages = mysql.query_db(message_query)
 	comments = mysql.query_db(comment_query)
 	return render_template('wall.html', allMessages = messages, allComments = comments)
@@ -113,7 +113,7 @@ def newComment(id):
 		flash("Comment cannot greater than 100 characters!")
 		return redirect('/wall')
 	query_data = {'messageId': id, 'currentSession': session['id'], 'userComment': request.form['newComment']}
-	insert_query = "INSERT INTO comments (messages_id, users_id, comment, created_at, updated_at) VALUES (:messageId, :currentSession, :userComment, NOW(), NOW())"
+	insert_query = "INSERT INTO comments (message_id, user_id, comment, created_at, updated_at) VALUES (:messageId, :currentSession, :userComment, NOW(), NOW())"
 	mysql.query_db(insert_query, query_data)
 	return redirect('/wall')
 
