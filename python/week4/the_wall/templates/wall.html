@@ -47,15 +47,15 @@
 					{% for messages in allMessages: %}
 						<hr>
 						<h3>Message: </h3>
-						<p><span style="font-weight: bold">{{ messages['message'] }}</span> - {{ messages['firstName'] }} {{ messages['lastName'] }} - {{ messages['created_at'] }}</p>
+						<p><span style="font-weight: bold">{{ messages['message'] }}</span> - {{ messages['first_name'] }} {{ messages['last_name'] }} - {{ messages['created_at'] }}</p>
 						<br>
 						<p>Comments:</p>
 						{% for comments in allComments: %}
 						<div class="row">
 							<div class="col-xs-1"></div>
 							<div class="col-xs-10">
-								{% if messages['id'] == comments['messages_id'] %}
-									<p><span style="font-weight: bold">{{ comments['comment'] }}</span> - {{ comments['firstName'] }} {{ comments['lastName'] }} - {{ comments['created_at'] }}</p>
+								{% if messages['id'] == comments['message_id'] %}
+									<p><span style="font-weight: bold">{{ comments['comment'] }}</span> - {{ comments['first_name'] }} {{ comments['last_name'] }} - {{ comments['created_at'] }}</p>
 								{% endif %}
 							</div>
 						</div>
