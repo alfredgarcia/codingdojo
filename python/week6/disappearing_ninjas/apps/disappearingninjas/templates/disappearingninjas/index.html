@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ninjas</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+{% if no_ninjas == True %}
+<h1>No Ninjas Here.</h1>
+{% endif %}
+{% if view_all == True %}
+<img src="{% static 'img/donatello.png' %}">
+<img src="{% static 'img/leonardo.png' %}">
+<img src="{% static 'img/michelangelo.png' %}">
+<img src="{% static 'img/raphael.png' %}">
+{% endif %}
+{% if color == 'blue' %}
+<img src="{% static 'img/leonardo.png' %}">
+{% endif %}
+{% if color == 'red' %}
+<img src="{% static 'img/raphael.png' %}">
+{% endif %}
+{% if color == 'orange' %}
+<img src="{% static 'img/michelangelo.png' %}">
+{% endif %}
+{% if color == 'purple' %}
+<img src="{% static 'img/donatello.png' %}">
+{% endif %}
+{% if megan == True %}
+<img src="{% static 'img/megan.png' %}">
+{% endif %}
+
+</body>
+</html>
